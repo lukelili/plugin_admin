@@ -1,1 +1,0 @@
-import{d as a,h as s,i as t,o,G as n}from"./vendor.a9c2ed88.js";import{_ as r}from"./index.6b1f6cda.js";const c=a({setup(_){const e=()=>{n({targets:".circle",translateX:["10px","0"]})};return(l,i)=>(o(),s("div",null,[t("div",{class:"circle",onClick:e,onMouseover:e},null,32)]))}});var m=r(c,[["__scopeId","data-v-0de4eca4"]]);export{m as default};
