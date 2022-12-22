@@ -128,13 +128,13 @@ export const dynamicRoutes: Array<RouteRecordRaw> = [
 				component: () => import('@/views/dynamicForms/index.vue'),
 			},
 			{
-				path: '/bigFileUpload',
-				name: 'bigFileUpload',
+				path: '/uploadFile',
+				name: 'uploadFile',
 				meta: {
 					title: '大文件上传',
 					icon: 'big_file',
 				},
-				component: () => import('@/views/bigFileUpload/index.vue'),
+				component: () => import('@/views/uploadFile/index.vue'),
 			},
 			{
 				path: '/table',

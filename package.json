@@ -19,6 +19,7 @@
 		"dat.gui": "^0.7.9",
 		"echarts": "^5.4.0",
 		"element-plus": "^2.2.21",
+		"element-resize-detector": "^1.2.4",
 		"fast-glob": "^3.2.11",
 		"file-saver": "^2.0.5",
 		"gl-matrix": "^3.4.3",
