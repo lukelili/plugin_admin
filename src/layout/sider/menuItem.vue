@@ -1,8 +1,8 @@
 <template>
 	<el-sub-menu v-if="route.children && route.children.length" :index="route.path">
 		<template #title>
-			<el-icon>
-				<svg-icon v-if="route.meta.icon" :name="route.meta.icon" />
+			<el-icon v-if="route.meta.icon">
+				<svg-icon :name="route.meta.icon" />
 			</el-icon>
 			<span>{{ route.meta.title }}</span>
 		</template>
@@ -11,8 +11,8 @@
 		</template>
 	</el-sub-menu>
 	<el-menu-item v-else :index="route.path">
-		<el-icon>
-			<svg-icon v-if="route.meta.icon" :name="route.meta.icon" />
+		<el-icon v-if="route.meta.icon">
+			<svg-icon :name="route.meta.icon" />
 		</el-icon>
 		<template #title>
 			<span>{{ route.meta.title }}</span>

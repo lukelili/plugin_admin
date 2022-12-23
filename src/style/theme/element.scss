@@ -18,3 +18,12 @@
     }
   }
 }
+
+.el-drawer{
+  .el-drawer__header{
+    padding: 10px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #dcdfe6;
+  }
+  --el-drawer-padding-primary: 10px
+}

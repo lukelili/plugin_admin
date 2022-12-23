@@ -1,17 +1,14 @@
 <template>
 	<header class="header">
 		<el-button type="primary" circle plain :icon="icon" @click="settingStore.toggleCollapsed" />
-		<div class="user">
-			<el-icon>
-				<svg-icon name="peeling"></svg-icon>
-			</el-icon>
-		</div>
+		<user />
 	</header>
 </template>
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useSettingStore } from '@/store/setting'
 import { Fold, Expand } from '@element-plus/icons-vue'
+import user from './user.vue'
 
 const settingStore = useSettingStore()
 
