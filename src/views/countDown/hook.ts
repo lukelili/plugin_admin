@@ -43,7 +43,7 @@ export function useCountDown() {
 		clearTimer()
 	}
 	function clearTimer() {
-		state.showTime = ''
+		state.showTime = '00:00'
 		clearInterval(timer)
 		timer = null
 	}
