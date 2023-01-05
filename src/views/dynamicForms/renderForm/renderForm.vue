@@ -22,6 +22,8 @@ const props = withDefaults(defineProps<PROPS>(), {
 	formState: Object,
 })
 
+console.log(props)
+
 const formRef = ref<FormInstance | undefined>()
 
 const stateData: any = reactive({

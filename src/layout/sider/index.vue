@@ -3,6 +3,14 @@
 		<div class="logo"></div>
 		<el-menu :default-active="selectedKeys" router :collapse="settingStore.isCollapsed">
 			<menu-item v-for="route in routes" :key="route.name" :route="route" />
+			<el-menu-item index="/countDown">
+				<el-icon>
+					<svg-icon name="countDown" />
+				</el-icon>
+				<template #title>
+					<span>倒计时</span>
+				</template>
+			</el-menu-item>
 		</el-menu>
 	</div>
 </template>

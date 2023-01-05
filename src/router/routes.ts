@@ -145,14 +145,14 @@ export const dynamicRoutes: Array<RouteRecordRaw> = [
 				},
 				component: () => import('@/views/table/index.vue'),
 			},
-			{
-				path: '/chatRoom',
-				name: 'chatRoom',
-				meta: {
-					title: '聊天室',
-				},
-				component: () => import('@/views/chatRoom/index.vue'),
-			},
+			// {
+			// 	path: '/chatRoom',
+			// 	name: 'chatRoom',
+			// 	meta: {
+			// 		title: '聊天室',
+			// 	},
+			// 	component: () => import('@/views/chatRoom/index.vue'),
+			// },
 		],
 	},
 ]
@@ -167,6 +167,11 @@ export const staticRoutes: Array<RouteRecordRaw> = [
 		path: '/404',
 		name: '404',
 		component: () => import('@/views/error/404.vue'),
+	},
+	{
+		path: '/countDown',
+		name: 'CountDown',
+		component: () => import('@/views/countDown/index.vue'),
 	},
 ]
 
