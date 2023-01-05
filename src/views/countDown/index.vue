@@ -2,7 +2,7 @@
 	<div class="count-down">
 		<!-- <video class="bg_video" muted autoplay src="@/assets/bg_video.mp4"></video> -->
 		<el-space class="set-time">
-			<el-select v-model="state.minute" @change="clearTimer" sizi="small">
+			<el-select v-model="state.minute" @change="onTimeChange" sizi="small">
 				<el-option v-for="item in options" :value="item.value" :label="item.label"></el-option>
 			</el-select>
 			<el-button type="primary" sizi="small" icon="VideoPlay" @click="onStartCountDown">开始倒计时</el-button>
@@ -31,7 +31,7 @@ import { useCountDown, useComputed } from './hook'
 
 const { timeArray } = useComputed()
 
-const { state, clearTimer, onStartCountDown, onResetCountDown } = useCountDown()
+const { state, onTimeChange, onStartCountDown, onResetCountDown } = useCountDown()
 
 const options = [
 	{ value: 30000, label: '30秒' },

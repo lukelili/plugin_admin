@@ -10,9 +10,10 @@ interface IState {
 	ms: number
 }
 
+const DEFULT_TIME = '00:30'
 // 倒计时间
 const state: IState = reactive({
-	showTime: '00:00',
+	showTime: DEFULT_TIME,
 	minute: 30000,
 	ms: 0,
 })
@@ -32,7 +33,7 @@ export function useCountDown() {
 		timer = setInterval(() => {
 			if (m !== 0) {
 				m = m - 1000
-				state.showTime = dayjs(m).format('mm:ss')
+				setShowTime(m)
 			} else {
 				clearTimer()
 			}
@@ -40,17 +41,25 @@ export function useCountDown() {
 	}
 	function onResetCountDown() {
 		state.minute = 30000
+		state.showTime = DEFULT_TIME
+		clearTimer()
+	}
+	function onTimeChange() {
+		setShowTime(state.minute)
 		clearTimer()
 	}
 	function clearTimer() {
-		state.showTime = '00:00'
 		clearInterval(timer)
 		timer = null
+	}
+	function setShowTime(ms: number) {
+		state.showTime = dayjs(ms).format('mm:ss')
 	}
 	return {
 		state,
 		onStartCountDown,
 		onResetCountDown,
+		onTimeChange,
 		clearTimer,
 	}
 }
